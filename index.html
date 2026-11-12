@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viatu Vibes — Shoes Delivered Across Kenya</title>
+  <meta name="description" content="Viatu Vibes: sneakers, boots, heels, sandals and formal shoes for men, women and kids. Pay with M-Pesa. Delivery to all 47 counties in Kenya.">
+  <meta name="theme-color" content="#0c0c0e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Viatu Vibes — Shoes Delivered Across Kenya">
+  <meta property="og:description" content="Sneakers, boots, heels, sandals and formal shoes. Pay with M-Pesa. Countrywide delivery.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ShoeStore",
+    "name": "Viatu Vibes",
+    "address": { "@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "KE" },
+    "currenciesAccepted": "KES",
+    "paymentAccepted": "M-Pesa, Cash"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="navDrawer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+
+      <a href="#top" class="logo" aria-label="Viatu Vibes home">
+        <span class="logo-mark" aria-hidden="true">V</span>
+        <span class="logo-text">Viatu<b>Vibes</b></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#shop" data-cat="men">Men</a>
+        <a href="#shop" data-cat="women">Women</a>
+        <a href="#shop" data-cat="kids">Kids</a>
+        <a href="#shop" data-type="sneakers">Sneakers</a>
+        <a href="#shop" data-sale="1" class="nav-sale">Sale</a>
+      </nav>
+
+      <form class="search" role="search" id="searchForm">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <label for="searchInput" class="sr-only">Search shoes</label>
+        <input id="searchInput" type="search" placeholder="Search shoes, brands…" autocomplete="off">
+      </form>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="wishBtn" aria-label="Wishlist" aria-controls="wishDrawer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.5 8 3.6 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.6 0 5.7 3.5 4.5 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+          <span class="count" id="wishCount" hidden>0</span>
+        </button>
+        <button class="icon-btn" id="cartBtn" aria-label="Cart" aria-controls="cartDrawer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span class="count" id="cartCount" hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow" id="greeting">Karibu! · New season</p>
+          <h1>Step into your <span class="hl">vibe</span>.</h1>
+          <p class="lead">Sneakers, boots, heels and everyday sandals, chosen for Kenyan streets. Order in minutes, pay with M-Pesa, and get it delivered to any of the 47 counties.</p>
+          <div class="hero-cta">
+            <a href="#shop" class="btn btn-primary btn-lg">Shop the collection</a>
+            <a href="#shop" class="btn btn-ghost btn-lg" data-sale="1">View sale</a>
+          </div>
+          <ul class="hero-points">
+            <li><b>47</b><span>counties delivered</span></li>
+            <li><b>7-day</b><span>exchanges</span></li>
+            <li><b>M-Pesa</b><span>&amp; cash on delivery</span></li>
+          </ul>
+        </div>
+        <div class="hero-visual" id="heroVisual" role="region" aria-roledescription="carousel" aria-label="Featured shoes">
+          <div class="hero-stage">
+            <div class="hero-disc" id="heroDisc" aria-hidden="true"></div>
+            <div class="hero-ring" aria-hidden="true"></div>
+            <div class="hero-slides" id="heroSlides"></div>
+            <button type="button" class="hero-tag" id="heroTag"></button>
+          </div>
+          <div class="hero-thumbs" id="heroThumbs" role="group" aria-label="Choose a featured shoe"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust" aria-label="Why shop with us">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+          <div><b>Countrywide delivery</b><span>Same day in Nairobi</span></div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18h4"/></svg>
+          <div><b>Lipa na M-Pesa</b><span>Simple &amp; secure</span></div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4"/></svg>
+          <div><b>7-day exchanges</b><span>Wrong size? We'll swap it</span></div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div><b>Quality checked</b><span>Every pair inspected</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIBE PICKER -->
+    <section class="vibes" aria-labelledby="vibeHeading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="vibeHeading">Unaenda wapi leo?</h2>
+          <p>Where are you headed today? Tap one and we'll show you the right pairs.</p>
+        </div>
+        <div class="vibe-row" id="vibeRow"></div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" aria-labelledby="catHeading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="catHeading">Shop by category</h2>
+          <p>Find the right pair for every occasion.</p>
+        </div>
+        <div class="cat-grid" id="catGrid"></div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="section shop" id="shop" aria-labelledby="shopHeading">
+      <div class="container">
+        <div class="section-head shop-head">
+          <div>
+            <h2 id="shopHeading">All shoes</h2>
+            <p id="resultCount" aria-live="polite"></p>
+          </div>
+          <div class="shop-tools">
+            <button class="btn btn-outline filter-toggle" id="filterToggle" aria-controls="filterDialog">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+              Filters <span class="pill-count" id="filterCount" hidden></span>
+            </button>
+            <label class="sort">
+              <span class="sr-only">Sort by</span>
+              <select id="sortSelect">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="name">Name A–Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="active-filters" id="activeFilters"></div>
+
+        <div class="shop-layout">
+          <aside class="filters" aria-label="Filters" id="filtersSidebar"></aside>
+          <div>
+            <div class="product-grid" id="productGrid"></div>
+            <div class="empty" id="emptyState" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <h3>No shoes match those filters</h3>
+              <p id="emptyText">Try removing a filter or searching for something else.</p>
+              <button class="btn btn-primary" data-action="clear-filters">Clear all filters</button>
+            </div>
+            <div class="load-more-wrap">
+              <button class="btn btn-outline" id="loadMore" hidden>Load more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO BAND -->
+    <section class="promo-band">
+      <div class="container promo-inner">
+        <div>
+          <p class="eyebrow light">How ordering works</p>
+          <h2>Order on WhatsApp. Pay with M-Pesa. Done.</h2>
+        </div>
+        <ol class="steps">
+          <li><span>1</span><div><b>Add to cart</b><p>Pick your style and size.</p></div></li>
+          <li><span>2</span><div><b>Checkout</b><p>Your order is sent to us on WhatsApp.</p></div></li>
+          <li><span>3</span><div><b>Pay &amp; receive</b><p>Pay via M-Pesa or cash on delivery (Nairobi).</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="reviews" aria-labelledby="revHeading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="revHeading">Customer love</h2>
+          <p>What our customers are saying.</p>
+        </div>
+        <div class="testimonials" id="testimonials"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq" aria-labelledby="faqHeading">
+      <div class="container faq-wrap">
+        <div class="section-head">
+          <h2 id="faqHeading">Questions?</h2>
+          <p>Everything you need to know about ordering, delivery and exchanges.</p>
+          <button class="btn btn-outline" data-action="size-guide">Open size guide</button>
+        </div>
+        <div class="faq" id="faqList">
+          <details>
+            <summary>How do I pay?</summary>
+            <p>Pay via Lipa na M-Pesa using the Till/Paybill details shown at checkout and send us the M-Pesa confirmation message on WhatsApp. In Nairobi you can also pay cash on delivery.</p>
+          </details>
+          <details>
+            <summary>How long does delivery take?</summary>
+            <p>Nairobi orders placed before 2pm are usually delivered the same day. Nearby counties take 1–2 days and the rest of Kenya 2–4 days, via courier or matatu parcel service.</p>
+          </details>
+          <details>
+            <summary>How much is delivery?</summary>
+            <p id="faqDelivery">Delivery is calculated at checkout based on your county.</p>
+          </details>
+          <details>
+            <summary>What if the shoes don't fit?</summary>
+            <p>We offer free size exchanges within 7 days of delivery, as long as the shoes are unworn and in their original box. Just WhatsApp us.</p>
+          </details>
+          <details>
+            <summary>Can I pick up from your shop?</summary>
+            <p id="faqPickup">Yes. Choose "Pick up" at checkout and we'll let you know when your order is ready.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div class="container news-inner">
+        <div>
+          <h2>Get first dibs on new drops</h2>
+          <p>Join our list for restocks, flash sales and early access. No spam.</p>
+        </div>
+        <form class="news-form" id="newsForm">
+          <label for="newsEmail" class="sr-only">Email address</label>
+          <input id="newsEmail" type="email" placeholder="you@email.com" required>
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="beads" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo logo-light">
+          <span class="logo-mark" aria-hidden="true">V</span>
+          <span class="logo-text">Viatu<b>Vibes</b></span>
+        </a>
+        <p>Shoes for every step of the Kenyan hustle, from city streets to coastal sands.</p>
+        <div class="socials" id="socials"></div>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="#shop" data-cat="men">Men</a></li>
+          <li><a href="#shop" data-cat="women">Women</a></li>
+          <li><a href="#shop" data-cat="kids">Kids</a></li>
+          <li><a href="#shop" data-sale="1">Sale</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <ul>
+          <li><a href="#faq">Delivery &amp; payment</a></li>
+          <li><a href="#faq">Exchanges</a></li>
+          <li><button class="link-btn" data-action="size-guide">Size guide</button></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visit / contact</h3>
+        <ul class="contact-list" id="contactList"></ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Viatu Vibes. All rights reserved.</span>
+      <span class="pay-badges"><span>M-Pesa</span><span>Cash on delivery</span></span>
+    </div>
+  </footer>
+
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5z"/><path class="wa-inner" d="M8.6 7.6c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.2.3 0 .5.5.9 1.1 1.6 1.8 2.2.8.7 1.5 1 1.8 1.1.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .9-.3 1.5-.3.6-1.6 1.2-2.2 1.2-.6 0-1.2.3-4-1-2.8-1.2-4.4-4.2-4.6-4.4-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3z"/></svg>
+  </a>
+
+  <!-- Mobile bottom tab bar -->
+  <nav class="bottom-nav" aria-label="Quick links">
+    <a href="#top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7v9h-5v-6H9v6H4z"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="#shop">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg>
+      <span>Shop</span>
+    </a>
+    <button type="button" data-open-drawer="wishDrawer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.5 8 3.6 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.6 0 5.7 3.5 4.5 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+      <span>Saved</span><b class="count" id="bnWish" hidden>0</b>
+    </button>
+    <button type="button" data-open-drawer="cartDrawer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+      <span>Cart</span><b class="count" id="bnCart" hidden>0</b>
+    </button>
+    <a href="#" id="bnWa" target="_blank" rel="noopener" class="bn-wa">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5z"/><path d="M9 9.5c.5 2.5 2.8 4.8 5.5 5.5"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </nav>
+
+  <!-- ============ DIALOGS ============ -->
+
+  <!-- Mobile nav -->
+  <dialog class="drawer drawer-left" id="navDrawer" aria-label="Menu">
+    <div class="drawer-head">
+      <a href="#top" class="logo" data-close>
+        <span class="logo-mark" aria-hidden="true">V</span><span class="logo-text">Viatu<b>Vibes</b></span>
+      </a>
+      <button class="icon-btn" data-close aria-label="Close menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <a href="#shop" data-cat="men" data-close>Men</a>
+      <a href="#shop" data-cat="women" data-close>Women</a>
+      <a href="#shop" data-cat="kids" data-close>Kids</a>
+      <a href="#shop" data-type="sneakers" data-close>Sneakers</a>
+      <a href="#shop" data-type="boots" data-close>Boots</a>
+      <a href="#shop" data-type="heels" data-close>Heels</a>
+      <a href="#shop" data-sale="1" data-close class="nav-sale">Sale</a>
+      <a href="#faq" data-close>Help &amp; FAQ</a>
+    </nav>
+  </dialog>
+
+  <!-- Mobile filters -->
+  <dialog class="drawer drawer-left" id="filterDialog" aria-labelledby="filterDialogTitle">
+    <div class="drawer-head">
+      <h2 id="filterDialogTitle">Filters</h2>
+      <button class="icon-btn" data-close aria-label="Close filters"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="drawer-body filters" id="filtersMobile"></div>
+    <div class="drawer-foot">
+      <button class="btn btn-outline" data-action="clear-filters">Clear</button>
+      <button class="btn btn-primary" data-close id="showResultsBtn">Show results</button>
+    </div>
+  </dialog>
+
+  <!-- Cart -->
+  <dialog class="drawer" id="cartDrawer" aria-labelledby="cartTitle">
+    <div class="drawer-head">
+      <h2 id="cartTitle">Your cart</h2>
+      <button class="icon-btn" data-close aria-label="Close cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="drawer-body" id="cartBody"></div>
+    <div class="drawer-foot cart-foot" id="cartFoot"></div>
+  </dialog>
+
+  <!-- Wishlist -->
+  <dialog class="drawer" id="wishDrawer" aria-labelledby="wishTitle">
+    <div class="drawer-head">
+      <h2 id="wishTitle">Wishlist</h2>
+      <button class="icon-btn" data-close aria-label="Close wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="drawer-body" id="wishBody"></div>
+  </dialog>
+
+  <!-- Product -->
+  <dialog class="modal modal-lg" id="productModal" aria-labelledby="pmTitle">
+    <button class="icon-btn modal-close" data-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div id="productContent"></div>
+  </dialog>
+
+  <!-- Checkout -->
+  <dialog class="modal modal-lg" id="checkoutModal" aria-labelledby="coTitle">
+    <button class="icon-btn modal-close" data-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div id="checkoutContent"></div>
+  </dialog>
+
+  <!-- Size guide -->
+  <dialog class="modal" id="sizeModal" aria-labelledby="sizeTitle">
+    <button class="icon-btn modal-close" data-close aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="modal-pad">
+      <h2 id="sizeTitle">Size guide</h2>
+      <p class="muted">Measure your foot from heel to longest toe while standing. If you're between sizes, go half a size up.</p>
+      <div class="table-wrap">
+        <table class="size-table">
+          <thead><tr><th>EU</th><th>UK</th><th>US (M)</th><th>US (W)</th><th>Foot length (cm)</th></tr></thead>
+          <tbody id="sizeRows"></tbody>
+        </table>
+      </div>
+      <h3 class="mt">Kids</h3>
+      <div class="table-wrap">
+        <table class="size-table">
+          <thead><tr><th>EU</th><th>UK</th><th>Approx. age</th><th>Foot length (cm)</th></tr></thead>
+          <tbody id="kidsSizeRows"></tbody>
+        </table>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
